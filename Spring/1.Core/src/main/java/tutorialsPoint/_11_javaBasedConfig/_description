@@ -1,0 +1,10 @@
+java based config
+1) have an entity-class(HelloWorld here)
+2) create a config-class(HelloWorldConfig here) with @Configuration annotation
+3) make methods that create beans with @Bean annotations
+4) make context from config-class with  ApplicationContext ctx = new AnnotationConfigApplicationContext(HelloWorldConfig.class);
+5) get beans from context!
+
+Config in multiple classes(@Import):
+http://docs.spring.io/spring-javaconfig/docs/1.0.0.M4/reference/html/ch04s03.html
+

@@ -1,0 +1,20 @@
+based on https://www.youtube.com/watch?v=msXL2oDexqw&index=1&list=PLqq-6Pq4lTTbx8p2oCgcAQGQyqN8XeA1x
+and http://www.springboottutorial.com/hibernate-jpa-tutorial-with-spring-boot-starter-jpa
+
+We've got a blog with articles and comments to articles. This is a CRUD REST with cascade deleting of corresponding comments
+
+# Filename data.sql, if exists, gets executed at start, after table creations; any other name won't work
+
+cascade deleting via annotations in Comment class;
+
+interface ArticleStats in Article(and in repo) allows to get only certain fields;
+
+when serializing to json, comment will show articleId - also via annonations in Comment
+(if we want to show more than id, gotta make Projection(like with ArticleStats))
+
+For transactions:
+ - in Launcher @EnableTransactionManagement
+ - in Service or wherever @Transactional over class(for all methods) or over method
+   (if over both, the config on the method one override config of class: readOnly, and other @ options)
+
+Db is persisted through application.properties and is saved in spring-boot-h2-db.mv.db

@@ -1,0 +1,29 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+
+
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <context:component-scan base-package="_5_exceptionHandling"/>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/pages/com.jr.rest/spring/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!--5_exceptionPage - exception view in case MySpringException occurs, if there is any other type of exception then a generic 5_errorPage will take place.-->
+    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                <prop key="com.jr.rest.springMVC._5_exceptionHandling.MySpringException">
+                    5_exceptionPage
+                </prop>
+            </props>
+        </property>
+        <property name="defaultErrorView" value="5_errorPage"/>
+    </bean>
+</beans>

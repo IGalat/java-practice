@@ -1,0 +1,5 @@
+Two configs (web.xml, and java-based) point same path to different packages. When launching this on tomcat, it gives:
+WARNING [RMI TCP Connection(4)-127.0.0.1] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Mapping conflict. A Servlet registration exists with same mapping as the Jersey servlet application, named com.jr.rest.jersey.my._3_doubleConfig.JavaConfig, at the servlet mapping, /com.jr.rest/jersey2/my/doubleconfig/*.
+But launches successfully.
+
+XML config wins the conflict. Java config is completely ignored.

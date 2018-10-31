@@ -1,0 +1,6 @@
+https://github.com/bpodgursky/jbool_expressions
+
+Boolean expressions parser and resolver
+
+1. Simplifications, substitutions
+2. Sorting variables by weight, so resolved ones have  higher chance of resolving the whole expression

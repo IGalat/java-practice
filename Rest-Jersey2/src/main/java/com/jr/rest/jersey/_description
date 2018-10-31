@@ -1,0 +1,12 @@
+
+.my:
+1) Hello world, xml config
+2) Hello world, Java config, no xml-conf
+3) Java-config and xml-config point to the same packages. They conflict, but are similar
+4) Java-config and xml-config point to different packages. They conflict, XML wins
+
+TutorialsPoint      https://www.tutorialspoint.com/restful/restful_first_application.htm
+1) Hello world, returns XML structure to request. Instead of XML config used java
+2) CRUD example, also quick client implementation.
+
+//also: things from https://dennis-xlc.gitbooks.io/restful-java-with-jax-rs-2-0-2rd-edition/en/part1/chapter7/server_responses_and_exception_handling.html

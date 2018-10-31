@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Long form of passing data to setter: -->
+    <bean id="textEditor1" class="tutorialsPoint._7_setterDI.TextEditor">
+        <property name="spellChecker" ref="spellChecker2"/>
+        <property name="justString" value="property just String"/>
+    </bean>
+
+    <!-- Short form(aka p-namespace): -->
+    <bean id="textEditor2" class="tutorialsPoint._7_setterDI.TextEditor"
+          p:spellChecker-ref="spellChecker2"
+          p:justString="p:just String"
+            />
+    <!-- achtung: requires 'xmlns:p' in config(above) -->
+
+    <bean id="spellChecker2" class="tutorialsPoint._7_setterDI.SpellChecker"/>
+
+</beans>

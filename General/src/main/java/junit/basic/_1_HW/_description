@@ -1,0 +1,10 @@
+Results:
+Any failed test in test/ prevents Maven from packaging the project
+Tests in src/ aren't run on test phase of Maven
+Classes in src/ cannot access classes in test/
+
+
+HelloUtil - tested class, POJO
+HelloUtilTest(in test directory) - test class, will be run by maven on test phase
+HelloUtilTestMisplaced - copy-paste of HelloUtilTest, so that it could be used in TestRunner
+TestRunner - class that runs another testing class(or can run several)

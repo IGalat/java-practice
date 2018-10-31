@@ -1,0 +1,5 @@
+ways to start a new thread:
+1) class that extends Thread class
+2) class that implements Runnable interface, instance of it into a new Thread()
+3) one-time: new Thread(new Runnable() { implement 'run' method } );
+    also can anonymously: new Thread(new Runnable() { 'run' }).start;

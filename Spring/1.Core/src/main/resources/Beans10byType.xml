@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- autowired byType: -->
+    <bean id="textEditor" class="tutorialsPoint._10_autowire.byType.TextEditor" autowire="byType">
+        <property name="name" value="Generic Text Editor"/>
+    </bean>
+
+    <!--without autowiring:
+    <bean id = "textEditor" class = "com.tutorialsPoint.TextEditor">
+        <property name = "spellChecker" ref = "spellChecker" />
+        <property name = "name" value = "Generic Text Editor" />
+    </bean>-->
+
+    <!-- any name is ok, so long as type matches -->
+    <bean id="LalalaSpellChecker" class="tutorialsPoint._10_autowire.byType.SpellChecker"/>
+
+    <!-- this would cause an error, as more than 1 of required type exists with byType -->
+    <!--<bean id="DatSpellChecker" class="spring.tutorialsPoint.s10autowireire.byType.SpellChecker"/>-->
+
+</beans>

@@ -1,0 +1,22 @@
+Spring core tutorial +aop
+https://www.tutorialspoint.com/spring/index.htm
+
+tPoint:
+1. Hello world example:  make (Beans).xml file; create ApplicationContext based on it; call .getBean() method to get object.
+2. scopes: singleton, prototype  showcase (config for object in .xml)
+3. Bean life cycle: initialization and destruction methods
+4. BeanPostProcessor interface usage
+5. Inheritance through (Beans).xml file
+6. Dependency injection via constructor
+7. Dependency injection via setter
+8. Inner beans
+9. Making Collections beans: list(List or java-array), set, map, props(Properties)
+10. Autowiring beans by name, by type, in constructor, autodetect
+11. Java based config, also bean dependency, callback, bean scope  showcases
+12. Handling events with beans
+13. Custom events
+14. AOP (Aspects) XML and java based
+
+no package:
+1. Scheduled tasks, and - important! - WebApplicationInitializer (allows to do things on servlet launch)
+

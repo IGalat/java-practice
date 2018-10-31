@@ -1,0 +1,20 @@
+<beans xmlns = "http://www.springframework.org/schema/beans"
+       xmlns:context = "http://www.springframework.org/schema/context"
+       xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <!-- to scan @Component of the classes in the package -->
+    <context:component-scan base-package="_1_helloWorld"/>
+
+    <!-- this, together with String that methods return, makes the name of the page to be displayed -->
+    <!-- see HelloController.printHello 'return' -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!-- non-unique, can duplicate in different app configs -->
+        <property name="prefix" value="/pages/com.jr.rest/spring/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+</beans>

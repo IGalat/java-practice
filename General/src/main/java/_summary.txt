@@ -1,0 +1,8 @@
+Список:
+ - Core:
+   core.multithreading.udemy: creating threads, volatile/synchronized, thread pools
+   core.misc: enum; classpath print; observer pattern
+
+ - jbool: boolean expressions parser and resolver
+
+ - junit.basic: asserts, suites, multi-params, rules

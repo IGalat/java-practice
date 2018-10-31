@@ -1,0 +1,23 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- autowired byName:  -->
+    <bean id="textEditor" class="tutorialsPoint._10_autowire.byName.TextEditor" autowire="byName">
+        <property name="name" value="Generic Text Editor"/>
+    </bean>
+
+    <!--without autowiring:
+    <bean id="textEditor" class="spring.tutorialsPoint.s10autowireire.byName.TextEditor">
+        <property name="spellChecker" ref="spellChecker"/>
+        <property name="name" value="Generic Text Editor"/>
+    </bean>  -->
+
+    <bean id="spellChecker" class="tutorialsPoint._10_autowire.byName.SpellChecker"/>
+
+</beans>
+
+

@@ -1,0 +1,5 @@
+Bean life cycle: initialization and destruction methods
+Ways:
+    through (Beans).xml       (InitDestroyImplemented)
+    through interfaces        (InitDestroyXMLed)
+    through defaults in .xml  (InitDestroyDefaulted)

@@ -1,0 +1,35 @@
+General:
+    Core:
+        core.multithreading.udemy: creating threads, volatile/synchronized, thread pools
+
+        core.misc: enum; classpath print; observer pattern
+
+    jbool: boolean expressions parser and resolver
+
+    junit.basic: asserts, suites, multi-params, rules
+
+
+Rest-Jersey2: (Jersey is implementation of JAX-RS api)
+    jersey.my: config xml/java, conflict resolutions
+
+    jersey.tPoint: Showcase of CRUD, client impl
+
+
+Spring.1.Core:
+    Spring beans & IoC, AOP basics
+    Scheduler, Initializer
+
+
+Spring.2.MVC:
+    simple examples. Old concept? https://www.quora.com/What-is-the-difference-between-normal-Spring-MVC-and-Spring-RESTful-web-com.jr.service
+
+
+Spring.3.Boot-Rest-H2:
+    CRUD Rest with boot, cascade delete, Projection(partial query), transactions, h2 persist
+
+
+
+LINKS(полезное, но не представлено в проекте):
+ - Collections:    https://habrahabr.ru/post/237043/ - иерархия и описание структур ;  http://www.quizful.net/post/Java-Collections - то же
+ - Exceptions:   http://www.javamex.com/tutorials/exceptions/ExceptionHierarchy.png  - иерархия исключений(checked/unchecked)
+                 https://www.tutorialspoint.com/java/java_exceptions.htm - методы, примеры, всё что надо

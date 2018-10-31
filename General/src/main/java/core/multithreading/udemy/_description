@@ -1,0 +1,12 @@
+core.multithreading course "Java Multithreading" by CaveOfProgramming.com
+https://www.udemy.com/java-multithreading/
+
+1. ways to start a new thread
+2. volatile keyword
+3. synchronised keyword
+4. multiple locks
+5. Thread pools
+6. CountDownLatch class
+7. Producer-Consumer pattern
+8. wait() and notify()  use
+9. just low-level synchronization, a working and good example

@@ -1,0 +1,5 @@
+Autowiring beans by name, by type, in constructor, autodetect
+1) By name: the name of bean should be the same as the name in setter(or constructor?) ("spellChecker" in example) or NullPointerException
+2) By type: type of one of beans must exactly match setter's, and ONLY one must exist or error
+3) By constructor: same as by type, only in constructor instead of setter
+4) (without example) autodetect: Spring first tries to wire using autowire by constructor, if it does not work, tries to autowire by byType.

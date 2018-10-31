@@ -1,0 +1,31 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- lesson 5. inheritance -->
+    <bean id="helloWorld_5" class="tutorialsPoint._5_inheritanceInXML.HelloWorld">
+        <property name="message1" value="Hello World!"/>
+        <property name="message2" value="Hello Second World!"/>
+    </bean>
+
+    <bean id="helloIndia" class="tutorialsPoint._5_inheritanceInXML.HelloIndia" parent="helloWorld_5">
+        <property name="message1" value="Hello India 1"/>
+        <property name="message3" value="Namaste India 1"/>
+    </bean>
+
+    <!-- inheritance from abstract bean. this is only template, can't be instantiated -->
+    <bean id="indiaTeamplate" class="tutorialsPoint._5_inheritanceInXML.HelloIndia" abstract="true">
+        <property name="message1" value="Hello abstract India!"/>
+        <property name="message2" value="Hello abstract Second India!"/>
+        <property name="message3" value="Namaste abstract India!"/>
+    </bean>
+
+    <bean id="helloIndia2" class="tutorialsPoint._5_inheritanceInXML.HelloIndia" parent="indiaTeamplate">
+        <property name="message1" value="Hello India 2 child"/>
+        <property name="message3" value="Namaste India 2 child"/>
+    </bean>
+
+</beans>

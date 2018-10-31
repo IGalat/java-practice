@@ -1,0 +1,12 @@
+
+https://www.tutorialspoint.com/junit/junit_test_framework.htm  - JUnit tutorial. deprecated - for JUnit3?
+http://www.vogella.com/tutorials/JUnit/article.html - nice article/tutorial
+
+.basic:
+tPoint  1) Basic test, has test class in 'test/java', as well as in 'src'
+vogella 2) Assert and main methods/annotations, test suite(JUnit4-style), and deprecated(JUnit3) test style(TestCase)
+vogella 3) multiple data for each test. (I prefer programmatic approach)
+vogella 4) rules
+vogella 5) categories(more precision for test suites)
+
+

@@ -1,0 +1,15 @@
+ACHTUNG: folder, containing WEB-INF, must be called 'webapp' or default "XX-servlet.xml" won't be recognized!
+
+tutorialsPoint:      https://www.tutorialspoint.com/spring/spring_web_mvc_framework.htm
+mkYong:           http://www.mkyong.com/tutorials/spring-mvc-tutorials/
+
+tPoint.1) Hello world GET, thorough comments on how to make it. Standard xml config. Also ModelMap description
+tPoint.2) Redirection to different URL.  Also quick showcase of @PathVariable
+tPoint.3) More proper MVC: POJO gets passed around. Also ModelAndView, @ModelAttribute description
+mix   .4) Mapping static resource(.html, pictures etc). //Not working
+tPoint.5) Exception handling.
+mkyong.6) Java-configured hello world. NOT compatible with web.xml, disables it.
+ -No example(too simple): mapping multiple controllers    http://www.mkyong.com/spring-mvc/spring-mvc-beannameurlhandlermapping-example/     http://www.mkyong.com/spring-mvc/spring-mvc-controllerclassnamehandlermapping-example/    http://www.mkyong.com/spring-mvc/spring-mvc-simpleurlhandlermapping-example/      priorities:  http://www.mkyong.com/spring-mvc/configure-the-handler-mapping-priority-in-spring-mvc/
+
+
+
