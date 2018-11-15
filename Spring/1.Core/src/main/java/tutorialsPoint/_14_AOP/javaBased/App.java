@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {
     public static void main(String[] args) throws InterruptedException {
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring/tutorialspoint/Beans14java.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("Beans14java.xml");
 
         Student student = (Student) context.getBean("student");
         student.getName();

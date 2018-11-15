@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class App {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring/tutorialspoint/Beans9.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("Beans9.xml");
         JavaCollection jc = (JavaCollection) context.getBean("javaCollection");
 
         jc.getAddressList();

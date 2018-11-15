@@ -21,7 +21,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {
     public static void main(String[] args) {
-        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("spring/tutorialspoint/Beans12.xml");
+        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("Beans12.xml");
 
         // Let us raise a start event.
         context.start();

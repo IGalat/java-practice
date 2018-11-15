@@ -23,7 +23,7 @@ public class App {
 
     public static void main(String[] args) {
         //step 2: create an ApplicationContext
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring/tutorialspoint/Beans1.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("Beans1.xml");
         //step 3: get required bean from context
         App hw1 = (App) context.getBean("HW_1");
         hw1.printMessage();
@@ -40,7 +40,7 @@ public class App {
 //        xsi:schemaLocation="http://www.springframework.org/schema/beans
 //        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 //
-//<bean id="HW_1" class="spring.tutorialsPoint._1_helloWorld.App">
+//<bean id="HW_1" class="spring.tutorialspoint._1_helloWorld.App">
 //<property name="message" value="Hello World!"/>
 //</bean>
 //

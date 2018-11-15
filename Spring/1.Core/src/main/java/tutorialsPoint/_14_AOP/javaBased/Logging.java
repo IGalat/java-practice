@@ -9,23 +9,15 @@ public class Logging {
      * all the methods available. So advice will be called
      * for all the methods.
      */
-    @Pointcut("execution(* spring.tutorialsPoint._14_AOP.javaBased.*.*(..))")
+    @Pointcut("execution(* tutorialsPoint._14_AOP.javaBased.*.*(..))")
     private void selectAll() {
     }
 
-    /**
-     * This is the method which I would like to execute
-     * before a selected method execution.
-     */
     @Before("selectAll()")
     public void beforeAdvice() {
         System.out.println("Going to setup student profile.");
     }
 
-    /**
-     * This is the method which I would like to execute
-     * after a selected method execution.
-     */
     @After("selectAll()")
     public void afterAdvice() {
         System.out.println("Student profile has been setup.");

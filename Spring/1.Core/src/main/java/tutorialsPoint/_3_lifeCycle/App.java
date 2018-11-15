@@ -11,7 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
     public static void main(String[] args) {
         //wtf is AbstractApplicationContext?
-        AbstractApplicationContext context = new ClassPathXmlApplicationContext("spring/tutorialspoint/Beans3.xml");
+        AbstractApplicationContext context = new ClassPathXmlApplicationContext("Beans3.xml");
 
         System.out.println("Example 3.1: through implemented interfaces ------");
         InitDestroyImplemented hw1 = (InitDestroyImplemented) context.getBean("HW_3.1");

@@ -20,7 +20,7 @@ public class App {
 
 
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring/tutorialspoint/Beans2.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("Beans2.xml");
 
         // no "singleton" scope in Beans5_.xml, using default
         System.out.println("Example 2.1 ---------------");

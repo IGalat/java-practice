@@ -13,7 +13,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {
     public static void main(String[] args) {
-        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("spring/tutorialspoint/Beans13.xml");
+        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("Beans13.xml");
 
         CustomEventPublisher cvp = (CustomEventPublisher) context.getBean("customEventPublisher");
 

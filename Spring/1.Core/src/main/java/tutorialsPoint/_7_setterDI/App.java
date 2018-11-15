@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class App {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring/tutorialspoint/Beans7.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("Beans7.xml");
         TextEditor te1 = (TextEditor) context.getBean("textEditor1");
         te1.spellCheck();
         te1.printJustString();

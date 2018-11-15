@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class App {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring/tutorialspoint/Beans5_.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("Beans5_.xml");
 
         System.out.println("WORLD -----------------------------");
         HelloWorld objA = (HelloWorld) context.getBean("helloWorld_5");

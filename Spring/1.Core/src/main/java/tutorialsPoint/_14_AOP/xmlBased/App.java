@@ -13,7 +13,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
     public static void main(String[] args) {
         System.out.println("---------- POINT 0 ------------ before getting context");
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring/tutorialspoint/Beans14xml.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("Beans14xml.xml");
 
         System.out.println("---------- POINT 1 ------------ before getting student bean from context");
         Student student = (Student) context.getBean("student");

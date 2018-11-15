@@ -14,7 +14,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class App {
     public static void main(String[] args) {
-        AbstractApplicationContext context = new ClassPathXmlApplicationContext("spring/tutorialspoint/Beans4.xml");
+        AbstractApplicationContext context = new ClassPathXmlApplicationContext("Beans4.xml");
 
         HelloWorld obj = (HelloWorld) context.getBean("HW_4");
         obj.printMessage();
