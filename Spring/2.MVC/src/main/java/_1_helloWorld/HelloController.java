@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * from XX-servlet.xml, in this case: WEB-INF/com.jr.rest/spring/tutorialsPoint/Servlet1_HW.xml
  * will make the name of the page with content(1)
  * - method's ModelMap can contain attributes in key-value pairs, where key is the name of variable in the page with content(1)
- * 3) Make the application context .xml file in 'webapp/' (in this case: WEB-INF/com.jr.rest/spring/tutorialsPoint/Servlet1_HW.xml)
+ * 3) Make the application context .xml file in 'webapp/' (in this case: WEB-INF/rest/spring/Servlet1_HW.xml)
  * - default path/name is WEB-APP/XX-servlet.xml, where XX - name of servlet in web.xml. But this isn't necessary(see (4) )
  * - contains component-scan, and prefix/suffix
  * 4) in web.xml make a <servlet>, optionally with <init-param> which contains path/name of app context(3), if you don't want the default one
