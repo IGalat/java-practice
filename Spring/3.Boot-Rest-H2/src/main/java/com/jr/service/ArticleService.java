@@ -44,13 +44,12 @@ public class ArticleService {
         if (article.getId() != null) {
             throw new RuntimeException("Trying to add article with existing id " + article.getId());
         }
-        return repository.save(article);
 
         // Transaction rollback demo:
-        /*Article article1 = repository.save(new Article(article.getName(), article.getText()));
-        if (article1.getId() == 7)
+        /*if (article1.getId() == 7)
             throw new RuntimeException("Transactional!");
         return article1;*/
+        return repository.save(article);
     }
 
     public Article updateOne(Article article) {
