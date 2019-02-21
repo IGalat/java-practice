@@ -50,6 +50,15 @@ public class CommentService {
         return repository.save(comment);
     }
 
+    public Iterable<Comment> addAll(Iterable<Comment> comments) {
+        for (Comment comment : comments) {
+            if (comment.getId() != null) {
+                throw new RuntimeException("Trying to add comment with existing id " + comment.getId());
+            }
+        }
+        return repository.saveAll(comments);
+    }
+
     public void deleteById(Long id) {
         repository.deleteById(id);
     }

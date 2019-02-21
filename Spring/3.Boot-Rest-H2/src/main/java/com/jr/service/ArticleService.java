@@ -41,7 +41,10 @@ public class ArticleService {
     }
 
     public Article addOne(Article article) {
-        return repository.save(new Article(article.getName(), article.getText()));
+        if (article.getId() != null) {
+            throw new RuntimeException("Trying to add article with existing id " + article.getId());
+        }
+        return repository.save(article);
 
         // Transaction rollback demo:
         /*Article article1 = repository.save(new Article(article.getName(), article.getText()));
@@ -54,6 +57,16 @@ public class ArticleService {
         if (!repository.existsById(article.getId()))
             throw new RuntimeException("Trying to update non-existing article! ID = " + article.getId());
         return repository.save(article);
+    }
+
+    public Iterable<Article> addAll(Iterable<Article> articles) {
+        for (Article article : articles) {
+            if (article.getId() != null) {
+                throw new RuntimeException("Trying to add article with existing id " + article.getId());
+            }
+        }
+
+        return repository.saveAll(articles);
     }
 
     public void deleteById(Long id) {
