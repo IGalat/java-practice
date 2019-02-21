@@ -23,7 +23,7 @@ public class Article {
     @Column(nullable = false)
     private String name;
     @Column
-    @Lob // Large object
+    @Lob // Large object. CLOB/TEXT instead of varchar in DB; no checks for distinct on this column when hibernate makes requests etc
     private String text;
 
     /**
