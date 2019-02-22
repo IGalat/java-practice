@@ -25,7 +25,7 @@ Spring.2.MVC:
 
 
 Spring.3.Boot-Rest-H2:
-    CRUD Rest with boot, cascade delete, Projection(partial query), transactions, h2 persist
+    CRUD Rest with boot, cascade delete, Projection(partial query), transactions, h2 persist, tests
 
 
 

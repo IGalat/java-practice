@@ -10,6 +10,7 @@ import javax.persistence.EntityNotFoundException;
 /**
  * This maps Exceptions that come to controllers to response statuses
  * Can intercept and relay/transform message too
+ * Also, can insert this into tests for correct exception to status mapping @see ArticleControllerTest
  */
 
 @RestControllerAdvice
@@ -23,7 +24,7 @@ public class BlogControllerAdvice {
 
     @ExceptionHandler(EntityNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public String notFound(EntityNotFoundException e){
+    public String notFound(EntityNotFoundException e) {
         return e.getMessage();
     }
 }

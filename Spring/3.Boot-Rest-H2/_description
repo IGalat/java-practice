@@ -19,3 +19,12 @@ For transactions:
    (if over both, the config on the method one override config of class: readOnly, and other @ options)
 
 Db is persisted through application.properties
+
+
+Tests:
+ Controllers: We might want to test rest controllers for correct json in/output.
+  For mocks: can initialize spring context, which takes time for every class (ArticleControllerContextTest), or just mock (ArticleControllerTest)
+  For non-mocks(integration): not implemented
+ Service: Easily mocked repo, no spring context needed
+ Repo: use integration tests for these, not unit tests. Or don't test them, no code here.
+ Client-side: not implemented here, google TestRestTemplate
