@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Galatyuk Ilya
@@ -29,7 +31,13 @@ public class CommentService {
     }
 
     public Comment getOne(Long id) {
-        return repository.getOne(id);
+        try {
+            Comment comment = repository.getOne(id);
+            Objects.requireNonNull(comment.getAuthor());
+            return comment;
+        } catch (EntityNotFoundException e) {
+            throw new IllegalArgumentException("Comment with id " + id + " is not in DB");
+        }
     }
 
     public List<Comment> getByArticleId(Long articleId) {
@@ -41,7 +49,10 @@ public class CommentService {
     }
 
     public Comment addOne(Comment comment) {
-        return repository.save(new Comment(comment.getArticle(), comment.getAuthor(), comment.getText()));
+        if (comment.getId() != null) {
+            throw new IllegalArgumentException("Trying to add comment with existing id " + comment.getId());
+        }
+        return repository.save(comment);
     }
 
     public Comment updateOne(Comment comment) {
