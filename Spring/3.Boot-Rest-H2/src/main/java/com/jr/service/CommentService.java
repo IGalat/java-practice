@@ -36,7 +36,7 @@ public class CommentService {
             Objects.requireNonNull(comment.getAuthor());
             return comment;
         } catch (EntityNotFoundException e) {
-            throw new IllegalArgumentException("Comment with id " + id + " is not in DB");
+            throw new EntityNotFoundException("Comment with id " + id + " is not in DB");
         }
     }
 
@@ -57,14 +57,14 @@ public class CommentService {
 
     public Comment updateOne(Comment comment) {
         if (!repository.existsById(comment.getId()))
-            throw new RuntimeException("Trying to update non-existing comment! ID = " + comment.getId());
+            throw new EntityNotFoundException("Trying to update non-existing comment! ID = " + comment.getId());
         return repository.save(comment);
     }
 
     public Iterable<Comment> addAll(Iterable<Comment> comments) {
         for (Comment comment : comments) {
             if (comment.getId() != null) {
-                throw new RuntimeException("Trying to add comment with existing id " + comment.getId());
+                throw new EntityNotFoundException("Trying to add comment with existing id " + comment.getId());
             }
         }
         return repository.saveAll(comments);

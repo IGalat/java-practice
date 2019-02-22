@@ -42,14 +42,14 @@ public class ArticleService {
             // this is purely for exception type unification and better message
             // we need the right type for intercepting and giving BAD_REQUEST and not INTERNAL_SERVER_ERROR
         } catch (EntityNotFoundException e) {
-            throw new IllegalArgumentException("Article with id " + id + " is not in DB");
+            throw new EntityNotFoundException("Article with id " + id + " is not in DB");
         }
     }
 
     public Article getByName(String name) {
         Article article = repository.getByName(name);
         if (article == null) {
-            throw new IllegalArgumentException("Article with name '" + name + "' is not in DB");
+            throw new EntityNotFoundException("Article with name '" + name + "' is not in DB");
         }
         return article;
     }
