@@ -20,7 +20,7 @@ public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String name;
     @Column
     @Lob // Large object. CLOB/TEXT instead of varchar in DB; no checks for distinct on this column when hibernate makes requests etc
