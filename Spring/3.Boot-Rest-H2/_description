@@ -3,8 +3,9 @@ and http://www.springboottutorial.com/hibernate-jpa-tutorial-with-spring-boot-st
 
 We've got a blog with articles and comments to articles. This is a CRUD REST with cascade deleting of corresponding comments
 
-Filename data.sql, if exists, gets executed at start, after table creations; any other name won't work
-it's redundant in this project, as I populate DB via InitActions class
+Special filenames(recognized by spring/boot): data.sql(executed at start), logback-spring.xml, banner.txt
+
+data.sql is redundant in this project, as I populate DB via InitActions class
 
 cascade deleting via annotations in Comment class;
 
@@ -28,3 +29,9 @@ Tests:
  Service: Easily mocked repo, no spring context needed
  Repo: use integration tests for these, not unit tests. Or don't test them, no code here.
  Client-side: not implemented here, google TestRestTemplate
+
+Logs:
+ LoggingAspect class allows to log en masse, all methods in/out. Configurable, as any AOP
+ Spring boot uses logback, config here is through logback-spring.xml , only thing in application properties is hibernate.format_sql if we want that
+ But we can also write log levels in application.properties, and use .xml only a bit https://docs.spring.io/spring-boot/docs/current/reference/html/howto-logging.html
+ Custom banner is banner.txt, to logs through application.properties  spring.main.banner-mode=log

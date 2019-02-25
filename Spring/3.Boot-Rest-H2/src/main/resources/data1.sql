@@ -1,3 +1,4 @@
+-- Redundant, see InitActions class
 insert into article
 values(1,'On bees and not bees', 'To be or not to be?');
 
