@@ -1,7 +1,6 @@
 package com.jr.model;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.util.JSONPObject;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.OnDelete;
@@ -49,11 +48,5 @@ public class Comment {
         Article temp = new Article();
         temp.setId(articleId);
         this.article = temp;
-    }
-
-    public static void main(String[] args) {
-        String lala = "ыыыыїїїї私企業";
-
-        JSONPObject
     }
 }
