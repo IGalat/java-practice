@@ -33,3 +33,4 @@ LINKS(полезное, но не представлено в проекте):
  - Collections:    https://habrahabr.ru/post/237043/ - иерархия и описание структур ;  http://www.quizful.net/post/Java-Collections - то же
  - Exceptions:   http://www.javamex.com/tutorials/exceptions/ExceptionHierarchy.png  - иерархия исключений(checked/unchecked)
                  https://www.tutorialspoint.com/java/java_exceptions.htm - методы, примеры, всё что надо
+
