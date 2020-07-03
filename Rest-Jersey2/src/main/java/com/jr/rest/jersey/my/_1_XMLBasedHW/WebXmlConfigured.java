@@ -10,9 +10,9 @@ import javax.ws.rs.core.Response;
  * <p/>
  * request in browser/com.jr.service to get response:
  * http://{Server IP:port}/{Project name}/{Path, described in web.xml}/{@Path of this class}    in our case:
- * http://localhost:8080/HomePractice/rest/jersey2/my/xmlhw/hello                         - for accessing class in general. for param method:
- * http://localhost:8080/HomePractice/rest/jersey2/my/xmlhw/hello/{any param here}      example:
- * http://localhost:8080/HomePractice/rest/jersey2/my/xmlhw/hello/myInput
+ * http://localhost:8080/java-practice/rest/jersey2/my/xmlhw/hello                         - for accessing class in general. for param method:
+ * http://localhost:8080/java-practice/rest/jersey2/my/xmlhw/hello/{any param here}      example:
+ * http://localhost:8080/java-practice/rest/jersey2/my/xmlhw/hello/myInput
  * <p/>
  * when deploying tomcat(with project) on idea, project name isn't being specified:
  * http://localhost:8080/rest/jersey2/my/xmlhw/hello

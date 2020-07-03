@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * <p/>
  * Request in client to get response:
  * http://{Server IP:port}/{servlet path from web.xml}/{@ResuestMapping path of this class}   in our case:
- * http://localhost:8080/HomePractice/rest/spring/hw/hello
+ * http://localhost:8080/java-practice/rest/spring/hw/hello
  * when deploying tomcat from idea, project name isn't being specified:
  * http://localhost:8080/rest/spring/hw/hello
  * This will output 1_hello.jsp page, with ${message} parameter as set in printHello method

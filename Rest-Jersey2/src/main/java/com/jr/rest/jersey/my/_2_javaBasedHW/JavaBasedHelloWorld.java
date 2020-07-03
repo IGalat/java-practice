@@ -9,8 +9,8 @@ import javax.ws.rs.core.Response;
  * This class doesn't know about global config
  * <p/>
  * request in client to get response:
- * http://localhost:8080/HomePractice/rest/jersey2/my/javahw/hello  -  http://{Serv IP}/{Project name}/{@ApplicationPath from config class}/{@Path of this class}
- * http://localhost:8080/HomePractice/rest/jersey2/my/javahw/hello/SOME_PARAMETER     - to get response from method with "param"
+ * http://localhost:8080/java-practice/rest/jersey2/my/javahw/hello  -  http://{Serv IP}/{Project name}/{@ApplicationPath from config class}/{@Path of this class}
+ * http://localhost:8080/java-practice/rest/jersey2/my/javahw/hello/SOME_PARAMETER     - to get response from method with "param"
  * <p/>
  * when deploying tomcat(with project) on idea, project name isn't being specified:
  * http://localhost:8080/rest/jersey2/my/javahw/hello
