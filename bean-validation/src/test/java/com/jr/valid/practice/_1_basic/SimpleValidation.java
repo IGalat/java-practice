@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Set;
 
-public class SimpleValidation extends ValidatorTestBase {
+class SimpleValidation extends ValidatorTestBase {
     @Test
     void allValid() {
         MarketGood good = new MarketGood(100, 40, 90);
@@ -34,8 +34,6 @@ public class SimpleValidation extends ValidatorTestBase {
                 .findFirst().get();
         ConstraintDescriptor<?> classDescriptor = classLevelViolation.getConstraintDescriptor();
 
-        System.out.println();
-
         // This is NOT a distinction between class and field levels
         // just number of classes in @Constraint validatedBy
         Assertions.assertEquals(0, fieldDescriptor.getConstraintValidatorClasses().size());
@@ -49,7 +47,7 @@ public class SimpleValidation extends ValidatorTestBase {
 
         Assertions.assertEquals(Default.class, fieldDescriptor.getGroups().stream().findFirst().get());
 
-
+        // No built in way to distinguish class from field violations
     }
 
 }

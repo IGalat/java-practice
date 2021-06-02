@@ -7,9 +7,8 @@ import org.hibernate.validator.constraints.Range;
 
 @MarketGoodCheck(payload = ValidationLevel.MUST.class)
 public class MarketGood {
-    @PositiveOrZero
+    @PositiveOrZero(payload = ValidationLevel.WARN.class)
     private Integer supply;
-    @PositiveOrZero
     private Integer demand;
     @NotNull(payload = ValidationLevel.MUST.class)
     @Range(min = -100, max = 100)
@@ -32,6 +31,7 @@ public class MarketGood {
         this.supply = supply;
     }
 
+    @PositiveOrZero
     public Integer getDemand() {
         return demand;
     }
