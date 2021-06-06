@@ -47,16 +47,6 @@ as it can be very resource-consuming to pull data twice
 - using DB
 - using supplied data
 
-## Order of validation
-
-Every time we check whether the field that's checked or depended on has not been invalidated already
-
-Every time (TODO is this possible?) we first evaluate SILENT level, then MUST, then WARN
-
-- Single field constraints
-- Class level
-- Integration
-
 ## Conflict resolution
 
 The field has MUST and WARN level invalidations
