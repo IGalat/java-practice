@@ -12,7 +12,7 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping("article")
+@RequestMapping("articles")
 public class ArticleController {
 
     private final ArticleService articleService;
@@ -45,8 +45,8 @@ public class ArticleController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public Long addOne(@RequestBody Article article) {
-        return articleService.addOne(article).getId();
+    public Article addOne(@RequestBody Article article) {
+        return articleService.addOne(article);
     }
 
     @RequestMapping(method = RequestMethod.PUT)

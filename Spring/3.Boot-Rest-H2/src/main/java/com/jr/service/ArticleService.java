@@ -59,14 +59,16 @@ public class ArticleService {
     }
 
     public Article addOne(Article article) {
-        if (article.getId() != null) {
-            throw new IllegalArgumentException("Trying to add article with existing id " + article.getId());
+        // Transaction rollback demo:
+        if (article.getId() != null && article.getId() == 7) {
+            repository.save(article);
+            throw new RuntimeException("Transactional!");
         }
 
-        // Transaction rollback demo:
-        /*if (article1.getId() == 7)
-            throw new RuntimeException("Transactional!");
-        return article1;*/
+        if (article.getId() != null) {
+            throw new IllegalArgumentException("Trying to add article with id " + article.getId() + ", shouldn't have id");
+        }
+
         return repository.save(article);
     }
 
@@ -79,7 +81,7 @@ public class ArticleService {
     public Iterable<Article> addAll(Iterable<Article> articles) {
         for (Article article : articles) {
             if (article.getId() != null) {
-                throw new IllegalArgumentException("Trying to add article with existing id " + article.getId());
+                throw new IllegalArgumentException("Trying to add article with id " + article.getId() + "shouldn't have id");
             }
         }
 
