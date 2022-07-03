@@ -49,7 +49,7 @@ public class ArticleController {
         return articleService.addOne(article);
     }
 
-    @RequestMapping(method = RequestMethod.PUT)
+    @RequestMapping(method = RequestMethod.PATCH)
     public void updateOne(@RequestBody Article article) {
         articleService.updateOne(article);
     }

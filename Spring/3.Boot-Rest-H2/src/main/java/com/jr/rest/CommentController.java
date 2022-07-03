@@ -34,22 +34,22 @@ public class CommentController {
         return commentService.getOne(id);
     }
 
-    @GetMapping("/article/{articleId}")
+    @GetMapping("/articles/{articleId}")
     public List<Comment> getByArticleId(@PathVariable Long articleId) {
         return commentService.getByArticleId(articleId);
     }
 
-    @GetMapping("/author/{author}")
+    @GetMapping("/authors/{author}")
     public List<Comment> getByAuthor(@PathVariable String author) {
         return commentService.getByAuthor(author);
     }
 
     @PostMapping
-    public Long addOne(@RequestBody Comment comment) {
-        return commentService.addOne(comment).getId();
+    public Comment addOne(@RequestBody Comment comment) {
+        return commentService.addOne(comment);
     }
 
-    @PutMapping
+    @PatchMapping
     public void updateOne(@RequestBody Comment comment) {
         commentService.updateOne(comment);
     }

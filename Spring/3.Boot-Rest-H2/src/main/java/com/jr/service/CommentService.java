@@ -19,10 +19,12 @@ import java.util.Objects;
 public class CommentService {
 
     private final CommentRepository repository;
+    private final ArticleService articleService;
 
     @Autowired
-    public CommentService(CommentRepository repository) {
+    public CommentService(CommentRepository repository, ArticleService articleService) {
         this.repository = repository;
+        this.articleService = articleService;
     }
 
 
