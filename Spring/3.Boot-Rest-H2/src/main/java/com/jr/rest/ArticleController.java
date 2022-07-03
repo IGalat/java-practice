@@ -49,8 +49,9 @@ public class ArticleController {
         return articleService.addOne(article);
     }
 
-    @RequestMapping(method = RequestMethod.PATCH)
-    public void updateOne(@RequestBody Article article) {
+    @RequestMapping(path = "/{id}", method = RequestMethod.PATCH)
+    public void updateOne(@RequestBody Article article, @PathVariable Long id) {
+        article.setId(id);
         articleService.updateOne(article);
     }
 

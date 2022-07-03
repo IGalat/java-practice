@@ -49,8 +49,9 @@ public class CommentController {
         return commentService.addOne(comment);
     }
 
-    @PatchMapping
-    public void updateOne(@RequestBody Comment comment) {
+    @PatchMapping("/{id}")
+    public void updateOne(@RequestBody Comment comment, @PathVariable Long id) {
+        comment.setId(id);
         commentService.updateOne(comment);
     }
 
