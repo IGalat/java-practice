@@ -53,7 +53,7 @@ public class ArticleControllerContextTest {
 
         given(articleService.getAll()).willReturn(articles);
 
-        mockMvc.perform(get("/article").contentType(MediaType.APPLICATION_JSON))
+        mockMvc.perform(get("/articles").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(1)))
                 .andExpect(jsonPath("$[0].name", is(zen.getName())));

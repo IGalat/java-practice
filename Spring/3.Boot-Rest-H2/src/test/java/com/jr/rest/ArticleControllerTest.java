@@ -51,7 +51,7 @@ public class ArticleControllerTest {
     public void getOneExisting() throws Exception {
         given(articleService.getOne(1L)).willReturn(zen);
 
-        MockHttpServletResponse response = mvc.perform(get("/article/1").accept(MediaType.APPLICATION_JSON))
+        MockHttpServletResponse response = mvc.perform(get("/articles/1").accept(MediaType.APPLICATION_JSON))
                 .andReturn().getResponse();
 
         Assert.assertEquals(HttpStatus.OK.value(), response.getStatus());
@@ -63,7 +63,7 @@ public class ArticleControllerTest {
     public void getOneNotExisting() throws Exception {
         given(articleService.getOne(1L)).willThrow(new EntityNotFoundException());
 
-        MockHttpServletResponse response = mvc.perform(get("/article/1").accept(MediaType.APPLICATION_JSON))
+        MockHttpServletResponse response = mvc.perform(get("/articles/1").accept(MediaType.APPLICATION_JSON))
                 .andReturn().getResponse();
 
         Assert.assertEquals(HttpStatus.NOT_FOUND.value(), response.getStatus());
